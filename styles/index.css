@@ -1,0 +1,213 @@
+html,
+body {
+  font-family: monospace;
+}
+/* CSS code to display 10 emojis per row using Flexbox */
+.emoji-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 20px;
+  gap: 10px; /* Adjust the gap to provide spacing between emojis */
+}
+
+#single-emoji {
+  cursor: pointer;
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+.page-container {
+  width: 100%;
+}
+
+.toast {
+  position: fixed;
+  bottom: 5%;
+  width: fit-content;
+  left: 40%;
+  background: #26c626;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 300px;
+  display: none;
+}
+.toast-active {
+  display: flex;
+}
+.toast.error {
+  background: red;
+}
+.toast-content {
+  color: #fff;
+}
+
+.toast button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+/* Basic card styling */
+.emoji-card {
+  cursor: pointer;
+  width: 80%;
+  height: 250px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: box-shadow 0.3s;
+}
+
+/* Emoji styling */
+.emoji {
+  font-size: 64px;
+  text-align: center;
+}
+
+/* Details styling */
+.details {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.category {
+  font-size: 14px;
+  color: #888888;
+}
+
+/* Card hover animation */
+.emoji-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Basic form styling */
+.filter-form {
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 10px;
+  /* width: 100vw; */
+  min-width: fit-content;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Search bar styling */
+.search-bar {
+  width: 70%;
+  height: 36px;
+  padding: 5px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Dropdown styling */
+.dropdown {
+  margin-left: 10px;
+  height: 36px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+/* Basic navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+}
+
+/* Navbar brand (logo) styling */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+.showingText {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+/* Basic pagination styling */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
+}
+.pagination.select-page {
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+/* Pagination item (link) styling */
+.pagination-item {
+  padding: 5px 10px;
+  margin-right: 5px;
+  color: #333;
+  background: #fff;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+/* Hover and active state */
+.pagination-item:hover,
+.pagination-item.active {
+  background-color: #ccc;
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .emoji-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .emoji-card {
+    width: 80%;
+    margin-left: 5%;
+  }
+  .dropdown-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .dropdown-list .dropdown {
+    width: 50%;
+  }
+  .filter-form {
+    flex-direction: column;
+  }
+  .search-bar {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .toast {
+    left: 5%;
+  }
+  .pagination {
+    display: none;
+  }
+  .pagination.select-page {
+    display: flex;
+  }
+}
